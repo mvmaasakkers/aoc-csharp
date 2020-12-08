@@ -11,7 +11,7 @@ namespace Event2015.Tests
         {
             var tests = new Dictionary<string, long>
             {
-                {Data.RawInput, 0}
+                {Data.RawInput, -1}
             };
             
             foreach (var test in tests)
@@ -25,7 +25,7 @@ namespace Event2015.Tests
         {
             var tests = new Dictionary<string, long>
             {
-                {Data.RawInput, 0}
+                {Data.RawInput, -1}
             };
             
             foreach (var test in tests)
