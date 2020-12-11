@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
+using Shared;
 
 namespace Event2015.Day06
 {
@@ -106,20 +107,4 @@ namespace Event2015.Day06
         public Coordinate To { get; set; }
     }
 
-    public struct Coordinate
-    {
-        public int X { get; set; }
-        public int Y { get; set; }
-
-        public Coordinate(int x, int y)
-        {
-            X = x;
-            Y = y;
-        }
-
-        public override string ToString()
-        {
-            return $"y-{Y}-x-{X}";
-        }
-    }
 }
