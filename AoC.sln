@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-#
+# 
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{A751072A-84EA-4B07-9E4F-E3096005CDDF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Event2015.Day01", "Event2015.Day01\Event2015.Day01.csproj", "{823192D1-8533-4043-955E-D87389E8A6C8}"
@@ -48,6 +48,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Event2020.Day12", "Event2020.Day12\Event2020.Day12.csproj", "{E56AAE5B-2EC0-4141-A50C-5B59DF502465}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Event2020.Day13", "Event2020.Day13\Event2020.Day13.csproj", "{74246DF3-8CE1-4C63-B760-AD4DCD2BA36E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Event2020.Day14", "Event2020.Day14\Event2020.Day14.csproj", "{D33430FF-3F34-4EBD-A88A-A2EA00F7CFC4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -151,5 +153,9 @@ Global
 		{74246DF3-8CE1-4C63-B760-AD4DCD2BA36E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74246DF3-8CE1-4C63-B760-AD4DCD2BA36E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74246DF3-8CE1-4C63-B760-AD4DCD2BA36E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D33430FF-3F34-4EBD-A88A-A2EA00F7CFC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D33430FF-3F34-4EBD-A88A-A2EA00F7CFC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D33430FF-3F34-4EBD-A88A-A2EA00F7CFC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D33430FF-3F34-4EBD-A88A-A2EA00F7CFC4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
