@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net.Sockets;
 using System.Text.RegularExpressions;
 
 namespace Event2020.Day14
 {
     public class Day14
     {
-        private List<string> _input;
-        private Regex r = new Regex(@"mem\[(?<addr>\d+)\] = (?<value>\d+)");
+        private readonly List<string> _input;
+        private readonly Regex _r = new Regex(@"mem\[(?<addr>\d+)\] = (?<value>\d+)");
 
         public Day14(string input)
         {
@@ -29,9 +28,9 @@ namespace Event2020.Day14
                 }
                 else if (l.StartsWith("mem"))
                 {
-                    var memvalGroups = r.Match(l).Groups;
-                    var addr = int.Parse(memvalGroups["addr"].Value);
-                    var value = long.Parse(memvalGroups["value"].Value);
+                    var groups = _r.Match(l).Groups;
+                    var addr = int.Parse(groups["addr"].Value);
+                    var value = long.Parse(groups["value"].Value);
 
                     var bitmask = Convert.ToString(value, 2).PadLeft(mask.Length, '0').ToArray();
 
@@ -69,9 +68,9 @@ namespace Event2020.Day14
                 }
                 else if (l.StartsWith("mem"))
                 {
-                    var memvalGroups = r.Match(l).Groups;
-                    var addr = long.Parse(memvalGroups["addr"].Value);
-                    var value = long.Parse(memvalGroups["value"].Value);
+                    var groups = _r.Match(l).Groups;
+                    var addr = long.Parse(groups["addr"].Value);
+                    var value = long.Parse(groups["value"].Value);
 
                     var bitmask = Convert.ToString(value, 2).PadLeft(mask.Length, '0').ToArray();
                     var memBitmask = Convert.ToString(addr, 2).PadLeft(mask.Length, '0').ToArray();
@@ -108,16 +107,9 @@ namespace Event2020.Day14
                 return new List<string> {address};
             }
 
-            var mask1 = address;
-            var mask2 = address;
-            var pos = address.IndexOf("X");
-            if (pos >= 0)
-            {
-                mask1 = mask1.Remove(pos, 1).Insert(pos, "0");
-                mask2 = mask2.Remove(pos, 1).Insert(pos, "1");
-            }
-
-            return GetMasks(mask1).Concat(GetMasks(mask2)).ToList();
+            var pos = address.IndexOf("X", StringComparison.Ordinal);
+            return GetMasks(address.Remove(pos, 1).Insert(pos, "0"))
+                .Concat(GetMasks(address.Remove(pos, 1).Insert(pos, "1"))).ToList();
         }
     }
 }
